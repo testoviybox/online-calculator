@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Екран привітання -->
+    <div id="welcome-screen">
+        <h1>Онлайн-калькулятор</h1>
+        <p>Зроблено Обремським Матвієм Валерійовичем</p>
+        <p>ФІТ 4-12</p>
+    </div>
+    
+    <!-- Калькулятор -->
+    <div class="calculator" id="calculator">
+        <input type="text" id="display" readonly placeholder="0">
+        <div class="buttons">
+            <!-- Рядок для AC та спеціальних функцій -->
+            <button onclick="clearAll()" class="ac">AC</button>
+            <button onclick="calculateSquareRoot()">√</button>
+            <button onclick="calculateLog()">log</button>
+            <button onclick="inputOperator('/')">÷</button>
+
+            <!-- Цифрові кнопки та операції -->
+            <button onclick="inputNumber(7)">7</button>
+            <button onclick="inputNumber(8)">8</button>
+            <button onclick="inputNumber(9)">9</button>
+            <button onclick="inputOperator('*')">×</button>
+
+            <button onclick="inputNumber(4)">4</button>
+            <button onclick="inputNumber(5)">5</button>
+            <button onclick="inputNumber(6)">6</button>
+            <button onclick="inputOperator('-')">-</button>
+
+            <button onclick="inputNumber(1)">1</button>
+            <button onclick="inputNumber(2)">2</button>
+            <button onclick="inputNumber(3)">3</button>
+            <button onclick="inputOperator('+')">+</button>
+
+            <button onclick="inputNumber(0)" class="zero">0</button>
+            <button onclick="inputDecimal()">.</button>
+            <button onclick="calculateResult()" class="equals">=</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
